@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.canvas{
+    border: 2px solid black;
+}
+
+.toolbox{
+    width: 504px;
+    padding: .5em 1.5em;
+    background-color: #4550e7;
+    display: flex;
+    align-items: center;
+}
+
+.toolbox > * {
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 37px;
+    margin-right: .6em;
+    font-size: 1.4rem;
+    
+}

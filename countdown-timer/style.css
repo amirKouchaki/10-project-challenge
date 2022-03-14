@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Poppins:wght@400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+
+body{
+    background: url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'poppins';
+    color: #333;
+}
+
+.mb-40{
+    margin-bottom: 40em;
+}
+
+.spacing > *+*{
+    margin-top: 2em;
+}
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: min(80%,65em);
+    margin: 1em 0 0 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.section-title{
+    font-size: clamp(1rem,5vw + 1rem ,4.5rem);
+    font-weight: 600;
+}
+
+.split{
+    display: grid;
+    gap: 1em;
+}
+
+#main-section .split{
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'months'
+    'days'
+    'hours'
+    'minutes'
+    'seconds';
+
+}
+
+.time-teller{
+    line-height: 1;
+}
+
+.big-text{
+    font-size: clamp(2rem,5vw + 1rem,4rem);
+}
+
+.number-title{
+    font-weight: 900;
+    color: #444;
+}
+
+#main-section .big-text{
+    display: block;
+    text-align: center;
+    text-shadow:  .5em black;
+}
+
+.split .time-teller:nth-child(1){
+    grid-area: months;
+}
+.split .time-teller:nth-child(2){
+    grid-area: days;
+}
+.split .time-teller:nth-child(3){
+    grid-area: hours;
+}
+.split .time-teller:nth-child(4){
+    grid-area: minutes;
+}
+.split .time-teller:nth-child(5){
+    grid-area: seconds;
+}
+
+
+@media (min-width: 15em){
+    #main-section .split{
+        grid-template-areas: 
+            'months days'
+            'hours minutes'
+            'seconds seconds'
+        ;
+    }
+}
+
+@media (min-width: 40em) {
+    #main-section .split{
+        grid-template-areas: 
+            'months months days days hours hours'
+            '...... minutes minutes seconds seconds .....'
+        ;
+    }
+}
+
+@media (min-width: 65em) {
+    #main-section .split{
+        grid-template-areas: 
+            'months days hours minutes seconds'
+        ;
+    }
+}
+

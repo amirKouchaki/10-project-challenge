@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>recipe-app-project</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a class="options" href="#"
+          ><i class="fa-solid fa-align-justify"></i
+        ></a>
+        <h1>recipe app</h1>
+        <div class="search">
+          <input class="search-input" type="text" placeholder="search recipe" />
+          <a class="search-link" href=""
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="fav"></div>
+      <section class="personalize-section">
+        <div class="container">
+          <div class="personalize-header">
+            <h2>Personalize</h2>
+            <div class="close-window"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <p class="personalize-description">your recommendations</p>
+          <a href="" class="personalize-btn">start personalizing</a>
+        </div>
+      </section>
+      <section id="recipe" class="days-recipe-section"></section>
+
+      <div class="recipe-pop-up-container hide">
+        <div class="pop-up-window ">
+          <div class="container spacing" >
+          <div class="close-window"><i class="fa-solid fa-xmark"></i></div>
+          <h2 class="pop-up-title"></h2>
+          <img class="pop-up-img" src="https://www.themealdb.com/images/ingredients/Lime.png" alt="">
+          <p class="pop-up-description"></p>
+          <ul>
+            <li class="pop-up-ingredients"></li>
+            <li class="pop-up-ingredients"></li>
+            <li class="pop-up-ingredients"></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
